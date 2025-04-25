@@ -15,6 +15,30 @@ public class under_graduate extends Person{
 	private String degree;
 	private String university;
 	
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getDegree() {
+		return degree;
+	}
+
+	public void setDegree(String degree) {
+		this.degree = degree;
+	}
+
+	public String getUniversity() {
+		return university;
+	}
+
+	public void setUniversity(String university) {
+		this.university = university;
+	}
+
 	@ManyToMany
 	@JoinTable(name="under_graduate_sessions ",
 	           joinColumns = @JoinColumn(name="under_graduates_id"),

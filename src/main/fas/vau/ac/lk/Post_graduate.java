@@ -16,7 +16,39 @@ public class Post_graduate extends Person {
 	private String research_interest;
 	private String second_degree;
 	
-	@ManyToMany
+	public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getInstitute() {
+        return institute;
+    }
+
+    public void setInstitute(String institute) {
+        this.institute = institute;
+    }
+
+    public String getResearch_interest() {
+        return research_interest;
+    }
+
+    public void setResearch_interest(String research_interest) {
+        this.research_interest = research_interest;
+    }
+
+    public String getSecond_degree() {
+        return second_degree;
+    }
+
+    public void setSecond_degree(String second_degree) {
+        this.second_degree = second_degree;
+    }
+
+    @ManyToMany
 	@JoinTable(name="post_graduate_sessions",
 	           joinColumns = @JoinColumn(name="post_graduates_id"),
 	           inverseJoinColumns =   @JoinColumn(name="sessions_id"))

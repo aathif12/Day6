@@ -20,6 +20,54 @@ public class session {
 	private Time time;
 	private int workshop_id;
 	
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Time getTime() {
+		return time;
+	}
+
+	public void setTime(Time time) {
+		this.time = time;
+	}
+
+	public int getWorkshop_id() {
+		return workshop_id;
+	}
+
+	public void setWorkshop_id(int workshop_id) {
+		this.workshop_id = workshop_id;
+	}
+
 	@ManyToMany(mappedBy="sessions")
 	private List<post_graduate> post_graduates;
 	
